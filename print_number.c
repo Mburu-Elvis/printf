@@ -10,8 +10,6 @@ int print_number(int n)
 {
 	int count = 0;
 
-	if (!n)
-		return (-1);
 	if (n < 0)
 	{
 		print_char('-');
