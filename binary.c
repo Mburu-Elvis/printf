@@ -10,7 +10,7 @@ int binary(unsigned int n)
 {
 	int count = 0;
 
-	if (n / 2 == 2)
+	if (n / 2 == 0)
 	{
 		print_char(n % 2 + '0');
 		count++;
