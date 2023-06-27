@@ -7,6 +7,6 @@
 
 int print_char(int char_c);
 int _printf(const char *format, ...);
-void specifier(char c, va_list *ap, int *count);
+void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
 #endif

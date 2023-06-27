@@ -10,16 +10,16 @@
  *
  * Return: None
 */
-void specifier(char c, va_list *ap, int *count)
+void specifier(char c, va_list ap, int *count)
 {
 	switch (c)
 	{
 		case 'c':
-			print_char(va_arg(*ap, int));
+			print_char(va_arg(ap, int));
 			*count += 1;
 			break;
 		case 's':
-			*count += print_string(va_arg(*ap, char *));
+			*count += print_string(va_arg(ap, char *));
 			break;
 		case '%':
 			print_char('%');
@@ -28,7 +28,7 @@ void specifier(char c, va_list *ap, int *count)
 		default:
 			print_char('%');
 			print_char(c);
-			count += 2;
+			*count += 2;
 			break;
 	}
 }

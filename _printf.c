@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			specifier(format[i], &arg, &count);
+			specifier(format[i], arg, &count);
 			i++;
 		}
 		print_char(format[i]);
