@@ -18,14 +18,12 @@ int print_number(int n)
 	}
 	if (n / 10 == 0)
 	{
-		print_char(n % 10 + '0');
-		count++;
+		count += print_char(n % 10 + '0');
 	}
 	if (n / 10)
 	{
 		count += print_number(n / 10);
-		print_char(n % 10 + '0');
-		count++;
+		count += print_char(n % 10 + '0');
 	}
 	return (count);
 }
