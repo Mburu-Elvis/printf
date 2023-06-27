@@ -28,16 +28,13 @@ void specifier(char c, va_list ap, int *count)
 			*count += 1;
 			break;
 		case  'd':
-			d = va_arg(ap, int);
-			print_char('0' + print_number(d));
+			print_number(va_arg(ap, int));
 			break;
 		case 'i':
-			i = va_arg(ap, int);
-			print_char('0' + print_number(i));
+			print_number(va_arg(ap, int));
 			break;
 		case 'b':
-			b = va_arg(ap, int);
-			print_char('0' + binary(b));
+			binary(va_arg(ap, int));
 			break;
 		default:
 			print_char('%');
