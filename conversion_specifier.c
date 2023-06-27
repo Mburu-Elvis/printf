@@ -25,14 +25,12 @@ void specifier(char c, va_list ap, int *count)
 			print_char('%');
 			*count += 1;
 			break;
-		case  'd':
-			print_number(va_arg(ap, int));
-			break;
+		case 'd':
 		case 'i':
-			print_number(va_arg(ap, int));
+			*count += print_number(va_arg(ap, int));
 			break;
 		case 'b':
-			binary(va_arg(ap, int));
+			*count += binary(va_arg(ap, int));
 			break;
 		default:
 			print_char('%');
