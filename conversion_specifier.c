@@ -15,8 +15,8 @@ void specifier(char c, va_list *ap, int *count)
 	switch (c)
 	{
 		case 'c':
-			*count += 1;
 			print_char(va_arg(*ap, int));
+			*count += 1;
 			break;
 		case 's':
 			*count += print_string(va_arg(*ap, char *));
