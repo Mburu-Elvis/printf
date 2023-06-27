@@ -25,6 +25,9 @@ void specifier(char c, va_list *ap, int *count)
 			print_char('%');
 			*count += 1;
 			break;
+		case '\0':
+		case ' ':
+			break;
 		default:
 			print_char('%');
 			print_char(c);
