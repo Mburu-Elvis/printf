@@ -12,8 +12,6 @@
 */
 void specifier(char c, va_list ap, int *count)
 {
-	int i, b, d;
-
 	switch (c)
 	{
 		case 'c':
