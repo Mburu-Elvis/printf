@@ -19,6 +19,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+				return (-1);
 			specifier(format[i], arg, &count);
 			i++;
 			continue;
