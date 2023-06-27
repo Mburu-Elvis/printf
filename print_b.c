@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * print_b - print binary
@@ -14,7 +15,7 @@ void print_b(int dec)
 	if (dec < 0)
 		return;
 	if (dec == 0)
-		print_char('0' + 0);
+		putchar('0' + 0);
 	for (i = 0; dec > 0; i++)
 	{
 		rem = dec % 2;
@@ -23,5 +24,5 @@ void print_b(int dec)
 		n++;
 	}
 	for (i = n; i > 0; i--)
-		print_char('0' + arr[i - 1]);
+		putchar('0' + arr[i - 1]);
 }

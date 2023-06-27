@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 * print_i - print integer
@@ -12,9 +13,9 @@ void print_i(int num)
 	int arr[50];
 
 	if (num == 0)
-		print_char('0' + 0);
+		putchar('0' + 0);
 	if (num < 0)
-		print_char('-');
+		putchar('-');
 	for (i = 0; num != 0; i++)
 	{
 		if (num < 0)
@@ -25,5 +26,5 @@ void print_i(int num)
 		n++;
 	}
 	for (i = n; i > 0; i--)
-		print_char('0' + arr[i - 1]);
+		putchar('0' + arr[i - 1]);
 }
