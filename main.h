@@ -9,5 +9,5 @@ int _printf(const char *format, ...);
 void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
 int binary(int n);
-int print_number(int n);
+int print_number(int *n);
 #endif

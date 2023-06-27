@@ -6,24 +6,27 @@
 *
 * Return: number of digits printed
 */
-int print_number(int n)
+int print_number(int *n)
 {
 	int count = 0;
 
-	if (n < 0)
+	if (!n)
+		return (-1);
+
+	if (*n < 0)
 	{
 		print_char('-');
-		n *= -1;
+		*n *= -1;
 		count++;
 	}
-	if (n / 10 == 0)
+	if (*n / 10 == 0)
 	{
-		count += print_char(n % 10 + '0');
+		count += print_char(*n % 10 + '0');
 	}
-	if (n / 10)
+	if (*n / 10)
 	{
-		count += print_number(n / 10);
-		count += print_char(n % 10 + '0');
+		count += print_number(*n / 10);
+		count += print_char(*n % 10 + '0');
 	}
 	return (count);
 }
