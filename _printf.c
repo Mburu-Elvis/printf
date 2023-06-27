@@ -14,9 +14,9 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && !format[1]))
 		return (-1);
-	while (format != NULL && format[i] != '\0')
+	while (format[i] != '\0')
 	{
-		while (format[i] == '%')
+		if (format[i] == '%')
 		{
 			i++;
 			specifier(format[i], &arg, &count);

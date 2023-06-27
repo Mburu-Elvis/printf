@@ -8,15 +8,14 @@
 */
 int print_string(char *str)
 {
-	int count = 0, i = 0;
+	int i = 0;
 
 	if (str == NULL)
 		str = "(null)";
 	while (str[i] != '\0')
 	{
 		print_char(str[i]);
-		count++;
 		i++;
 	}
-	return (count);
+	return (i);
 }
