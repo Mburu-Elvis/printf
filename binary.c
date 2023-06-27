@@ -6,12 +6,10 @@
 *
 * Return: the number of characters printed
 */
-int binary(int n)
+int binary(unsigned int n)
 {
 	int count = 0;
 
-	if (n < 0)
-		n *= -1;
 	if (n / 2 == 2)
 	{
 		print_char(n % 2 + '0');
