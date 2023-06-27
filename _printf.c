@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 	int i = 0, count = 0;
 	va_list arg;
 
-	va_start(arg, format);
 	if (format == NULL || (format[0] == '%' && !format[1]))
 		return (-1);
+	va_start(arg, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 			i++;
 			specifier(format[i], arg, &count);
 			i++;
+			continue;
 		}
 		print_char(format[i]);
 		count++;
