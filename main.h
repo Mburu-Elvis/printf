@@ -8,7 +8,7 @@ int print_char(int char_c);
 int _printf(const char *format, ...);
 void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
-void print_n(int num);
+int binary(int n);
 void print_i(int num);
 void print_b(int dec);
 #endif
