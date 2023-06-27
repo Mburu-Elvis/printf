@@ -9,6 +9,6 @@ int _printf(const char *format, ...);
 void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
 int binary(int n);
-void print_i(int num);
+int print_number(int n);
 void print_b(int dec);
 #endif
