@@ -10,4 +10,8 @@ void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
 int binary(unsigned int n);
 int print_number(int n);
+int unsigned_int(unsigned int n);
+int print_octal(int num);
+int print_hex(int num);
+int printHex(int num);
 #endif

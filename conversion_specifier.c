@@ -32,6 +32,18 @@ void specifier(char c, va_list ap, int *count)
 		case 'b':
 			*count += binary(va_arg(ap, int));
 			break;
+		case 'u':
+			*count += unsigned_int(va_arg(ap, unsigned int));
+			break;
+		case 'o':
+			*count += print_octal(va_arg(ap, int));
+			break;
+		case 'x':
+			*count += print_hex(va_arg(ap, int));
+			break;
+		case 'X':
+			*count += printHex(va_arg(ap, int));
+			break;
 		default:
 			print_char('%');
 			print_char(c);
