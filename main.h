@@ -11,7 +11,7 @@ int print_string(char *str);
 int binary(unsigned int n);
 int print_number(int n);
 int unsigned_int(unsigned int n);
-int print_octal(int num);
-int print_hex(int num);
-int printHex(int num);
+int print_octal(unsigned int num);
+int print_hex(unsigned int num);
+int printHex(unsigned int num);
 #endif

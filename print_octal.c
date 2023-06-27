@@ -6,22 +6,21 @@
 *
 * Return: number of characters printed
 */
-int print_octal(int num)
+int print_octal(unsigned int num)
 {
 	int count = 0;
-	unsigned int num_conv = (unsigned int)num;
 
-	if (num_conv / 8 == 0)
+	if (num / 8 == 0)
 	{
-		print_char(num_conv % 8 + '0');
+		print_char(num % 8 + '0');
 		count++;
 	}
-	if (num_conv / 8)
+	if (num / 8)
 	{
-		count += print_octal(num_conv / 8);
-		print_char(num_conv % 8 + '0');
+		count += print_octal(num / 8);
+		print_char(num % 8 + '0');
 		count++;
 	}
-return (0);
+	return (0);
 }
 
