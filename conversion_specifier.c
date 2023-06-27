@@ -12,6 +12,8 @@
 */
 void specifier(char c, va_list ap, int *count)
 {
+	int i, b, d;
+
 	switch (c)
 	{
 		case 'c':
@@ -26,13 +28,16 @@ void specifier(char c, va_list ap, int *count)
 			*count += 1;
 			break;
 		case  'd':
-			print_n(va_arg(ap, int));
+			d = va_arg(ap, int);
+			print_n(d);
 			break;
 		case 'i':
-			print_i(va_arg(ap, int));
+			i = va_arg(ap, int);
+			print_i(i);
 			break;
 		case 'b':
-			print_b(va_arg(ap, int));
+			b = va_arg(ap, int);
+			print_b(b);
 			break;
 		default:
 			print_char('%');

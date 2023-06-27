@@ -10,4 +10,5 @@ void specifier(char c, va_list ap, int *count);
 int print_string(char *str);
 void print_n(int num);
 void print_i(int num);
+void print_b(int dec);
 #endif
