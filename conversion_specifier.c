@@ -29,15 +29,15 @@ void specifier(char c, va_list ap, int *count)
 			break;
 		case  'd':
 			d = va_arg(ap, int);
-			print_number(d);
+			print_char('0' + print_number(d));
 			break;
 		case 'i':
 			i = va_arg(ap, int);
-			print_number(i);
+			print_char('0' + print_number(i));
 			break;
 		case 'b':
 			b = va_arg(ap, int);
-			binary(b);
+			print_char('0' + binary(b));
 			break;
 		default:
 			print_char('%');
